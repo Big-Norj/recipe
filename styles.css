@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=Sofia&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   
+}
+
+.main{
+    height: 100vh;
+    width: 100%;
+    
+}
+
+.wrapper, .slide{
+    position: relative;
+    width: 100%;
+    height: 100%;
+   
+}
+
+.slide{
+  overflow: hidden;
+}
+
+h1{
+    font-family: 'Sofia', cursive;
+}
+
+.slide::before{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0,0.4);
+    z-index: 10;
+}
+
+
+
+.slide .image{
+   height: 100%; 
+   width: 100%;
+   object-fit: cover;
+}
+
+.slide .image-data {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 100%;
+    z-index: 100;
+}
+
+.image-data h1{
+    font-size: 50px;
+    font-weight: 600;
+    color: white;
+}
+
+.image-data span.text{
+font-size: 14px;
+font-weight: 500;
+color: white;
+}
+
+.nav-btn{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    color: gray;
+}
+.nav:hover{
+    background-color: rgb(82, 77, 77);
+}
+.nav-btn::before,
+.nav-btn::after{
+    font-size: 25px;
+    color: white;
+}
+
+.swiper-pagination-bullet{
+    opacity: 1;
+    height: 12px;
+    width: 12px;
+    background: white;
+}
+
+.swiper-pagination-bullet-active{
+    border: solid 2px white;
+    background-color: blue;
+}
+
+.food{
+    position: relative;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-top: 30px;
+    border-radius: 12px;
+    background-color: rgb(241, 236, 236);
+    object-fit:scale-down;
+
+    display: flex;
+    flex-direction: row;
+
+}
+
+.meal{
+    margin-top: 30px;
+    margin-left: 40px;
+    margin-right: 40px;
+   transition: transform .2s;
+   width: 15pc;
+   height:60%;
+   gap: 30px;
+   border-radius: 50%;
+}
+
+.meal:hover{
+    transform: scale(.5);
+}
+.ho{
+    margin-top: 20px; 
+    margin-left: 30px;
+    margin-right: 30px;
+    font-size: xx-large;
+    font-weight: bolder;
+}
+
+h4{
+    text-decoration: none;
+    text-align: center;
+}
+
+.head{
+    text-align: center;
+}
+.recipe{
+    display: flex;
+    margin: 40px;
+    margin-top: 40px;
+     position: relative;
+     gap: 10px;
+}
+
+
+div.fork {
+    width: 80%;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-bottom: 25px;
+    width: 100%;
+    height: auto
+  
+  }
+  
+  div.content {
+    text-align: center;
+    padding: 10px 20px;
+  }
+
+  .overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #13ba00;
+    overflow: hidden;
+    width: 50%;
+    height: 50%;
+    transform: scale(0);
+    transition: .3s ease;
+  }
+  
+  .fork:hover .overlay {
+    transform: scale(1);
+  }
+
+  .text {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+  }
+
+  footer {
+    display: flex;
+  }
+  
+  .footerLeft {
+    flex: 2;
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+  }
+  
+  .fMenuTitle {
+    font-size: 16px;
+  }
+  
+  .fList {
+    padding: 0;
+    list-style: none;
+  }
+  
+  .fListItem {
+    margin-bottom: 10px;
+    color: gray;
+    cursor: pointer;
+  }
+  
+  .footerRight {
+    flex: 1;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .fInput {
+    padding: 5px;
+  }
+  
+  .fButton {
+    padding: 5px;
+    background-color: black;
+    color: white;
+  }
+  
+  .fIcons{
+    display: flex;
+  }
+  
+  .fIcon{
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+  }
+  
+  .copyright{
+    font-weight: 300;
+    font-size: 14px;
+  }
+  
+  @media screen and (max-width:480px) {
+    nav{
+      padding: 20px;
+    }
+}
